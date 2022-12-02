@@ -1,0 +1,405 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Hi! I'm Alexis
+  </title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana;
+  font-size: 17px;
+}
+
+.menu{
+  position: sticky;
+  top: 0;
+  background-color: #EB0B0B;
+  z-index: 300;
+  overflow: hidden;
+}
+
+.menu a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.menu a.active {
+  background-color: #636271;
+  color: white;
+}
+
+#myvideo{
+position: fixed;
+bottom: 0;
+right: 0;
+min-width: 100%;
+min-height: 100%;
+}
+
+.logo {
+  position: relative;
+  margin-top: 25px;
+  margin-left: 200px;
+  float: left;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  z-index: 130;
+}
+
+.intro {
+  text-align: right;
+  position: relative;
+  top: 335px;
+  margin-bottom: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: auto;
+  padding: 10px;
+  margin-right: 220px;
+  margin: auto;
+  font-family: arial;
+}
+
+.brand{
+  position: relative;
+  top: 400px;
+  margin-left: 600px;
+  margin-bottom: 80px;
+  z-index: 100;
+
+}
+
+.subtitle{
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  width: 470px;
+  left: 180px;
+  top: 320px;
+  padding: 2px;
+  text-align: center;
+  border-radius:40px;
+  color: #ff423b;
+  clear: left;
+}
+
+.logo2 {
+  position: relative;
+  top: 330px;
+  z-index: 100;
+  margin-left: 900px;
+  float: right;
+  width: 100%;
+  max-width: 400px;
+  clear:both ;
+}
+
+.start {
+  position: relative;
+  text-align: center;
+  left: 120;
+  bottom: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 600px;
+  padding: 15px;
+  margin-bottom: 20px;
+  z-index: 120;
+  clear: right;
+}
+
+.coding {
+  position: relative;
+  text-align: center;
+  left: 120;
+  bottom: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 600px;
+  padding: 15px;
+  margin-bottom: 20px;
+  z-index: 120;
+}
+
+.hobbies {
+  position: relative;
+  text-align: center;
+  left: 120;
+  bottom: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 600px;
+  padding: 15px;
+  margin-bottom: 100px;
+  z-index: 120;
+}
+
+.subtitle1{
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  width: 370px;
+  left: 450px;
+  padding: 2px;
+  bottom: 220px;
+  text-align: center;
+  border-radius:40px;
+  color: #ff423b;
+  clear: left;
+}
+
+.flip-box {
+  position: relative;
+  left: 200px;
+  bottom: 180px;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  float: left;
+  cursor: auto;
+}
+
+.flip-box-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: black;
+}
+
+.flip-box-back {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.center {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.subtitle2{
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  width: 370px;
+  left: 450px;
+  padding: 2px;
+  bottom: 100px;
+  text-align: center;
+  border-radius:40px;
+  color: #ff423b;
+  clear: left;
+}
+
+.img-container {
+  position: relative;
+  float: left;
+  width: 400px;
+  left: 65px;
+  bottom: 70px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.u1 {
+  position: relative;
+  z-index: 200;
+  cursor: pointer;
+  background: #EB0B0B;
+  width: auto;
+  padding: 13px;
+  clear: both;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+<video autoplay muted loop id="myVideo">
+  <source src="bg9.mp4" type="video/mp4">
+</video>
+
+<div class="menu">
+  <a class="active" href="#Intro">Home</a>
+  <a href="#subtitle">About me</a>
+  <a href="#subtitle1">Education</a>
+  <a href="#subtitle2">Gallery</a>
+  <a href="#Contact">Contact</a>
+</div>
+
+<div class="logo">
+  <img src="main.png" alt="logo" style="width:375px; height: 500px;">
+</div>
+
+
+<div class="Intro" id="Intro">
+  <h1> JAN CHRISTIAN <span style= " color: #ff423b; font-weight: bold">ALEXIS BAUAN</span></h1>
+  <h3>Infomation Technology Student</h3>
+  <h3>Service Management</h3>
+</div>
+
+<div class="brand">
+  <img src="logo3.png" alt="me" style="width:200px; height: 200px;">
+</div>
+
+<div class="subtitle" id="subtitle">
+  <h2> Know Something about me &nbsp; <img src="human.png" alt="human"> </h2>
+</div>
+
+<div class="logo2">
+  <img src="smain.png" alt="logo" style="width:300px; height: 570px;">
+</div>
+
+<div class="start">
+  <h3><img src="stand.png" alt="st"> &nbsp; I am ...</h3>
+  <p>Hi! My name is Alexis, 20 years old. An IT student here in the Philippines. My goal is to have a good job, always acquire knowledge, and strive for financial stability.
+  </p>
+</div>
+
+<div class="coding">
+  <h3><img src="html.png" alt="st"> &nbsp; Coding</h3>
+  <p>I started coding when I was a first year college (2020) with C++ as my first language. I know how to read a set program but to be honest I'm not good at making one.
+  </p>
+</div>
+
+<div class="hobbies">
+  <h3><img src="ball.png" alt="st"> &nbsp; Hobbies</h3>
+  <p> I love traveling, singing, phtotography, playing online games, and badminton. My hobbies are mixed of adventure to lowkey just keeping to be yourself and everythings gonna be worth a while.
+  </p>
+</div>
+
+<div class="subtitle1" id="subtitle1">
+  <h2> Education &nbsp; <img src="grad.png" alt="grad"> </h2>
+</div>
+
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="PES.png" class="center">
+    </div>
+    <div class="flip-box-back">
+      <h3>PINAMUCAN ELEMENTARY SCHOOL</h3>
+      <p>2008-2014</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="PIS.png" class="center">
+    </div>
+    <div class="flip-box-back">
+      <h3>PINAMUCAN INTEGRATED SCHOOL</h3>
+      <p>2014-2020</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="BSU.png" class="center">
+    </div>
+    <div class="flip-box-back">
+      <h3>BATANGAS STATE UNIVERSITY THE NATIONAL ENGINEERING UNIVERISTY</h3>
+      <p>2020-Present</p>
+    </div>
+  </div>
+</div>
+
+<div class="subtitle2" id="subtitle2">
+  <h2> Gallery &nbsp; <img src="cam.png" alt="grad"> </h2>
+</div>
+
+<div class="clearfix">
+  <div class="img-container">
+  <img src="p1.jpg" alt="p1" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="p2.jpg" alt="p2" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="p3.jpg" alt="p3" style="width:100%">
+  </div>
+</div>
+
+
+<div class="clearfix">
+  <div class="img-container">
+  <img src="p4.jpg" alt="p4" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="p7.jpeg" alt="p7" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="p8.jpg" alt="p8" style="width:100%">
+  </div>
+</div>
+
+<div class="u1" id="Contact">
+  <a href="https://www.facebook.com/alexis.christian.9659">
+    <input type="image" name="fb" src="fb.png" alt="fb">
+  </a>
+  <a href="https://www.instagram.com/axis_chris">
+    <input type="image" name="ig" src="ig.png" alt="ig">
+  </a>
+  <a href="https://twitter.com/AxisChris1">
+    <input type="image" name="twt" src="twt.png" alt="twt">
+  </a>
+  <a href="https://youtube.com/channel/UCga60KRsvfCpSig_M5Hi4mw">
+    <input type="image" name="yt" src="yt.png" alt="yt">
+  </a>
+  <a href="mailto:domchristianlast@gmail.com">
+    <input type="image" name="gmail" src="gmail.png" alt="gmail">
+  </a><br>
+  <div>
+    Copyright &copy; Alexis Christian 2022
+  </div>
+</div>
+
+</body>
+</html>
